@@ -13,7 +13,7 @@ permalink: /
       {% for event in site.categories['event'] limit:6 %} 
       <div class="event" data-event-date="{{event.date | date: "%F"}}">
         <div class="event-title">
-          <a href="{{ event.url | prepend: site.url }}">
+          <a href="{{ event.url | prepend: site.baseurl }}">
              <h4>{{ event.title }}</h4>
           </a>
         </div>
@@ -42,7 +42,7 @@ permalink: /
       </div>
       {% endfor %} 
       <div>
-        <a href={{"/events/"|prepend: site.url}}>更多</a>
+        <a href={{"/events/"|prepend: site.baseurl}}>更多</a>
       </div>
     </div>
     <div id="recent-posts" class="col-md-6 col-md-pull-6">
@@ -50,7 +50,7 @@ permalink: /
       {% for post in site.categories['blog'] limit:6 %} 
       <div class="post">
         <div class="post-title">
-          <a href="{{ post.url | prepend: site.url }}">
+          <a href="{{ post.url | prepend: site.baseurl }}">
              <h4><i class="fa fa-file-text-o"></i> {{ post.title }}</h4>
           </a>
         </div>
@@ -63,7 +63,7 @@ permalink: /
       </div>
       {% endfor %} 
       <div>
-        <a href={{"/blog/"|prepend: site.url}}>更多</a>
+        <a href={{"/blog/"|prepend: site.baseurl}}>更多</a>
       </div>
     </div>
   </div>
