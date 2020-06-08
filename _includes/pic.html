@@ -3,11 +3,11 @@
   {%- assign srcset = "" -%}
   {%- for size in (1..4) -%}
   {% capture filename %}assets/img/{{include.name}}{% if size > 1 %}@{{ size }}x{%endif%}.png{% endcapture %}
-  {% capture srcset %}{{srcset}}{{filename | prepend: '/' | prepend: site.baseurl }} {{size}}x, {% endcapture %}
+  {% capture srcset %}{{srcset}}{{filename | prepend: '/' | prepend: site.url }} {{size}}x, {% endcapture %}
   {%- endfor -%}
   {%- assign srcset = srcset | split: ", " | join: ", " -%}
   {% if theme == 1 %}
-  <img src="{{site.baseurl}}/assets/img/{{include.name}}.png" srcset="{{srcset}}" />
+  <img src="{{site.url}}/assets/img/{{include.name}}.png" srcset="{{srcset}}" />
   {% elsif srcset.size > 0 %}
   <source srcset="{{srcset}}" media="(prefers-color-scheme: dark)" />
   {% endif %}

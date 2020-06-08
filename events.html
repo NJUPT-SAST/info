@@ -13,7 +13,7 @@ permalink: /events/
       <div class="row event" data-event-date="{{event.date | date: "%F"}}">
         <div class="col-lg-9">
           <div class="event-title">
-            <a href="{{ event.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ event.title }}</h3></a>
+            <a href="{{ event.url | prepend: site.url }}"><h3 class="ctitle">{{ event.title }}</h3></a>
           </div>
           <div class="event-meta">
             <span><strong>时间: </strong>{{event.date | date: "%F"}}{% if event.time %} {{event.time}} {% endif %}</span>
@@ -40,12 +40,12 @@ permalink: /events/
           <div class="event-content">
             {{ event.excerpt }}
           </div>
-          <p><a href="{{ event.url | prepend: site.baseurl }}">[详情]</a></p>
+          <p><a href="{{ event.url | prepend: site.url }}">[详情]</a></p>
         </div>
 
         <div class="col-lg-3">
           {% if event.poster %}
-          <img class="img-responsive event-poster" src="{%if event.poster contains 'http:' or event.poster contains 'https:'%}{{event.poster}}{%else%}{{"/assets/img/events/"|prepend: site.baseurl}}{{event.poster}}{%endif%}" />
+          <img class="img-responsive event-poster" src="{%if event.poster contains 'http:' or event.poster contains 'https:'%}{{event.poster}}{%else%}{{"/assets/img/events/"|prepend: site.url}}{{event.poster}}{%endif%}" />
           {% endif %}
         </div>
 

@@ -2,7 +2,7 @@ title: NJUPT SAST
 brand: NJUPT SAST
 description: 南京邮电大学大学生科学技术协会官方网站
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://njupt-sast-technology-center.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 plugins:

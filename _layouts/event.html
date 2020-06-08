@@ -5,7 +5,7 @@ layout: default
 <div class="container mtb">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <a href="{{ page.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ page.title }}</h3></a>
+            <a href="{{ page.url | prepend: site.url }}"><h3 class="ctitle">{{ page.title }}</h3></a>
             <div class="event-meta">
               <span><strong><i class="fa fa-calendar fa-fw"></i> 时间: </strong>{{page.date | date: "%F"}}{% if page.time %} {{page.time}} {% endif %}</span>
               <span><strong><i class="fa fa-map-marker fa-fw"></i> 地点:</strong> {{page.place}}</span>
