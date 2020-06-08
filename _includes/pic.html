@@ -3,9 +3,9 @@
   {%- assign srcset = "" -%}
   {%- for size in (1..4) -%}
   {% capture filename %}assets/img/{{include.name}}{% if theme == 2 %}-dark{% endif %}{% if size > 1 %}@{{ size }}x{%endif%}.png{% endcapture %}
-  {%- iffileexists {{filename}} -%}
+  <!-- {%- iffileexists {{filename}} -%} -->
   {% capture srcset %}{{srcset}}{{filename | prepend: '/' | prepend: site.baseurl }} {{size}}x, {% endcapture %}
-  {%- endiffileexists -%}
+  <!-- {%- endiffileexists -%} -->
   {%- endfor -%}
   {%- assign srcset = srcset | split: ", " | join: ", " -%}
   {% if theme == 1 %}
