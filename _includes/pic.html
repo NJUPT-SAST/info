@@ -2,7 +2,7 @@
   {%- for theme in (1..2) reversed -%}
   {%- assign srcset = "" -%}
   {%- for size in (1..4) -%}
-  {% capture filename %}assets/img/{{include.name}}{% if theme == 2 %}-dark{% endif %}{% if size > 1 %}@{{ size }}x{%endif%}.png{% endcapture %}
+  {% capture filename %}assets/img/{{include.name}}{% if size > 1 %}@{{ size }}x{%endif%}.png{% endcapture %}
   {% capture srcset %}{{srcset}}{{filename | prepend: '/' | prepend: site.baseurl }} {{size}}x, {% endcapture %}
   {%- endfor -%}
   {%- assign srcset = srcset | split: ", " | join: ", " -%}
