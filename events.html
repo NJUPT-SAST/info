@@ -1,0 +1,94 @@
+---
+layout: default
+title: 活动与授课
+permalink: /events/
+---
+
+<div class="container mtb">
+  <div class="row">
+
+    <div class="col-lg-10 col-lg-offset-1" id="events-list">
+
+      {% for event in site.categories['event'] %}
+      <div class="row event" data-event-date="{{event.date | date: "%F"}}">
+        <div class="col-lg-9">
+          <div class="event-title">
+            <a href="{{ event.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ event.title }}</h3></a>
+          </div>
+          <div class="event-meta">
+            <span><strong>时间: </strong>{{event.date | date: "%F"}}{% if event.time %} {{event.time}} {% endif %}</span>
+            <span><strong>地点:</strong> {{event.place}}</span>
+            <span class="event-tags">
+              {% for type in event.types %}
+              <span class="label label-success">{{type}}</span>
+              {% endfor %}
+            </span>
+            {% if event.podcast or event.slides or event.bilibili %}
+            <br>
+            <span><strong>资源: </strong></span>
+            {% if event.audio %}
+            <a data-toggle="tooltip" title="播客" class="label label-info" href="{{event.podcast}}" target="_blank"><i class="fa fa-podcast fa-fw"></i></a>
+            {% endif %}
+            {% if event.youtube %}
+            <a data-toggle="tooltip" title="Bilibili" class="label label-info" href="{{event.bilibili}}" target="_blank"><i class="fa fa-video-camera fa-fw"></i></a>
+            {% endif %}
+            {% if event.slides %}
+            <a data-toggle="tooltip" title="讲稿" class="label label-info" href="{{event.slides}}" target="_blank"><i class="fa fa-file-alt fa-fw"></i></a>
+            {% endif %}
+            {% endif %}
+          </div>
+          <div class="event-content">
+            {{ event.excerpt }}
+          </div>
+          <p><a href="{{ event.url | prepend: site.baseurl }}">[详情]</a></p>
+        </div>
+
+        <div class="col-lg-3">
+          {% if event.poster %}
+          <img class="img-responsive event-poster" src="{%if event.poster contains 'http:' or event.poster contains 'https:'%}{{event.poster}}{%else%}{{"/assets/img/events/"|prepend: site.baseurl}}{{event.poster}}{%endif%}" />
+          {% endif %}
+        </div>
+
+      </div>
+
+      <div class="hline"></div>
+      <div class="spacing"></div>
+      {% endfor %}
+
+    </div><!--/col-lg-8 -->
+
+  </div><!--/row -->
+</div><!--/container -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+
+  var today = function() {
+    var pad = function (number) {
+      var r = String(number);
+      if ( r.length === 1 ) {
+        r = '0' + r;
+      }
+      return r;
+    }
+
+    var _today = new Date();
+    return Date.parse(
+      _today.getFullYear().toString() + "-"
+      + pad(_today.getMonth()+1) + "-"
+      + pad(_today.getDate())
+    );
+
+  }();
+
+  $('#events-list .event').each(function() {
+    console.log($(this).attr("data-event-date"));
+    var event_date = Date.parse($(this).attr("data-event-date"));
+    if (today < event_date) {
+      var label = "<span class='label label-warning'>即将举办</span>";
+      $(this).find(".event-tags").prepend(label);
+    }
+  });
+});
+</script>

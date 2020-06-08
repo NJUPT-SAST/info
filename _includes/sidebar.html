@@ -1,0 +1,20 @@
+<div class="col-lg-3">
+    <h4>分类</h4>
+    <div class="hline"></div>
+    {% for category in site.categories %}{% unless category.first == "blog" or category.first == "event" %}
+        <p>
+            <a href="{{ category.url }}"><i class="fa fa-angle-right"></i> {{ category | first | capitalize }}</a>
+            <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
+        </p>
+    {% endunless %}{% endfor %}
+
+    <div class="spacing"></div>
+
+    <h4>标签</h4>
+    <div class="hline"></div>
+    <p>
+        {% for tag in site.tags %}
+            <a class="btn btn-theme" href="{{ tag.url }}" role="button">{{ tag | first | capitalize }} ({{ tag | last | size }})</a>	         
+        {% endfor %}
+    </p>
+</div>

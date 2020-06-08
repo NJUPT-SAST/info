@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="container mtb">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <a href="{{ page.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ page.title }}</h3></a>
+            <div class="event-meta">
+              <span><strong><i class="fa fa-calendar fa-fw"></i> 时间: </strong>{{page.date | date: "%F"}}{% if page.time %} {{page.time}} {% endif %}</span>
+              <span><strong><i class="fa fa-map-marker fa-fw"></i> 地点:</strong> {{page.place}}</span>
+              <span class="event-tags">
+                {% for type in page.types %}
+                <span class="label label-success">{{type}}</span>
+                {% endfor %}
+              </span>
+              {% if page.podcast or page.slides or page.bilibili %}
+              <br>
+              <span><strong><i class="fa fa-cloud-download-alt fa-fw"></i> 资源: </strong></span>
+              {% if event.audio %}
+              <a data-toggle="tooltip" title="播客" class="label label-info" href="{{page.podcast}}" target="_blank"><i class="fa fa-podcast fa-fw"></i></a>
+              {% endif %}
+              {% if event.youtube %}
+              <a data-toggle="tooltip" title="Bilibili" class="label label-info" href="{{page.bilibili}}" target="_blank"><i class="fa fa-video-camera fa-fw"></i></a>
+              {% endif %}
+              {% if event.slides %}
+              <a data-toggle="tooltip" title="讲稿" class="label label-info" href="{{page.slides}}" target="_blank"><i class="fa fa-file-alt fa-fw"></i></a>
+              {% endif %}
+              {% endif %}
+            </div>
+              
+            {{ content }}
+
+            <div class="spacing"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
