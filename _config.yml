@@ -1,8 +1,8 @@
 title: NJUPT SAST
 brand: NJUPT SAST
 description: 南京邮电大学大学生科学技术协会官方网站
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://njupt-sast-technology-center.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://njupt-sast-technology-center.github.io"
 
 # Build settings
 plugins:
@@ -14,5 +14,7 @@ markdown: kramdown
 kramdown:
     input: GFM
     hard_wrap: false
+
+excerpt_separator: <!--more-->
 
 about: "Igniting the Thought! <br /> 南京邮电大学大学生科学技术协会（简称 SAST）是在校团委指导下，独立开展活动的学生科技文化及学术研究的组织。"
