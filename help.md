@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 使用帮助
-permalink: /help
+permalink: /help/
 ---
 
 ## 这是什么？
