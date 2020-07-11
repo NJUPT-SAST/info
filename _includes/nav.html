@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/public">{{ site.brand }}</a>
+      <a class="navbar-brand" href="/public/">{{ site.brand }}</a>
     </div>
     <div class="navbar-collapse collapse navbar-right">
       <ul class="nav navbar-nav">
@@ -18,6 +18,8 @@
             href="{{"/events/" | prepend: site.baseurl }}">EVENTS</a></li>
         <li {% if page.permalink == "/blog/" or page.categories contains "blog" %}class="active" {% endif %}><a
             href="{{"/blog/" | prepend: site.baseurl }}">BLOG</a></li>
+        <li {% if page.permalink == "/help/" %}class="active" {% endif %}><a
+              href="{{"/help/" | prepend: site.baseurl }}">HELP</a></li>
         <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
       </ul>
     </div>
