@@ -3,6 +3,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.about  }}">
+    <!-- for share to twitter -->
+    <meta name="twitter:card" content="summary"></meta>
+    <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="og:title" content="{{page.title}}" />
     <link rel="shortcut icon" href="{{ "/public/assets/img/favicon.png" | prepend: site.url }}">
     <link type="application/atom+xml" rel="alternate" href="{{ "/feed.xml" | prepend: site.url }}"
         title="{{ site.title }}" />

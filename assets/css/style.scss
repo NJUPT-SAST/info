@@ -123,6 +123,39 @@ div#root{
   }
 }
 
+#shareButton {
+  position: fixed;
+  bottom: calc(100% / 8);
+  right: calc(100% / 5);
+}
+
+#shareList {
+  border-radius: 50%;
+  @include dark{
+    background: $color_thu_purple;
+    color: $color_secondary_dark;
+  }
+}
+
+#shareMenu {
+  @include dark{
+    background: $color_bg_dark;
+  }
+}
+
+#shareItem {
+  @include dark{
+    color: $color_secondary_dark;
+  }
+}
+
+#shareItem:hover {
+  @include dark{
+    background: $color_bg_dark;
+    color: $color_primary_dark;
+  }
+}
+
 #recent-events {
   .event {
     padding-bottom: 1em; 
@@ -227,21 +260,6 @@ div#root{
     margin-bottom: 2em; 
   }
 }
-
-// #join-button {
-//   width: 100%;
-//   z-index: 1000;
-//   position: fixed;
-//   bottom: 0;
-//   padding: 10px 0;
-//   background-color: inherit;
-//   border-top: 1px solid #aaa;
-//   a {
-//     font-weight: bold;
-//     font-size: 18pt;
-//   }
-// }
-
 
 html.bad {
   &, body, div {

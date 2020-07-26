@@ -3,8 +3,4 @@ This is official website for NJUPT SAST powered by Jekyll and Github Page.
 Some stylesheets come from [tuna.moe](https://tuna.moe).
 
 ## To-Do
-- [ ] Simpler File System
-- [ ] Share Links for the Site
-- [ ] Web Fonts
-- [ ] Static Resources
 - [ ] Tag System

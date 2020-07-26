@@ -28,6 +28,20 @@ layout: default
               {% endif %}
               {% endif %}
             </div>
+            <div class="dropup" style="position: fixed;bottom: calc(100% / 8);right: calc(100% / 5);">
+              <button class="btn btn-default btn-lg dropdown-toggle" style="border-radius: 50%;" type="button"
+                  id="sharelist" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <i class="fa fa-share-alt"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="sharelist">
+                  <li><a href="http://service.weibo.com/share/share.php?title={{ page.title }}&url={{ page.url | prepend: site.baseurl | prepend: site.url }}"
+                          target="_blank">微博</a></li>
+                  <li><a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={{ page.url | prepend: site.baseurl | prepend: site.url }}&sharesource=qzone&summary={{ page.title }}"
+                          target="_blank">QQ 空间</a></li>
+                  <li><a href="https://twitter.com/share?text={{ page.title }}&url={{ page.url | prepend: site.baseurl | prepend: site.url }}"
+                          target="_blank">Twitter</a></li>
+              </ul>
+          </div>
               
             {{ content }}
 
