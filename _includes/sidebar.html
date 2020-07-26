@@ -2,19 +2,54 @@
     <h4>分类</h4>
     <div class="hline"></div>
     {% for category in site.categories %}{% unless category.first == "blog" or category.first == "event" %}
-        <p>
-            <a href="{{ category.url }}"><i class="fa fa-angle-right"></i> {{ category | first | capitalize }}</a>
-            <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
-        </p>
+    <p>
+        <a href="{{ category.url }}"><i class="fa fa-angle-right"></i> {{ category | first | capitalize }}</a>
+        <span class="badge badge-theme pull-right">{{ category | last | size }}</span>
+    </p>
     {% endunless %}{% endfor %}
 
     <div class="spacing"></div>
 
     <h4>标签</h4>
     <div class="hline"></div>
-    <p>
-        {% for tag in site.tags %}
-            <a class="btn btn-theme" href="{{ tag.url }}" role="button">{{ tag | first | capitalize }} ({{ tag | last | size }})</a>	         
+    <ul>
+        {% assign sorted_tags = site.tags | sort %}
+        {% for tag in sorted_tags %}
+        {% assign t = tag | first %}
+        {% assign posts = tag | last %}
+        <li id="{{ t }}-item" class="blog-tag-item">
+            <a class="btn btn-theme" href onclick="filter('{{ t }}'); return false;" role="button">{{ t }}
+                ({{ posts | size }})</a>
+        </li>
         {% endfor %}
-    </p>
+    </ul>
 </div>
+
+<script>
+    function filter(tag) {
+        setActiveTag(tag);
+        showContainer(tag);
+    }
+
+    function setActiveTag(tag) {
+        var items = document.getElementsByClassName('blog-tag-item');
+        for (var i = 0; i < items.length; i++) {
+            items[i].setAttribute('class', 'blog-tag-item');
+        }
+        var item = document.getElementById(tag + '-item');
+        if (item) {
+            item.setAttribute('class', 'blog-tag-item active');
+        }
+    }
+
+    function showContainer(tag) {
+        var lists = document.getElementsByClassName('blog-list-container');
+        for (var i = 0; i < lists.length; i++) {
+            lists[i].setAttribute('class', 'blog-list-container hidden');
+        }
+        var list = document.getElementById(tag + '-container');
+        if (list) {
+            list.setAttribute('class', 'blog-list-container');
+        }
+    }
+</script>

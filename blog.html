@@ -8,34 +8,75 @@ permalink: /blog/
   <div class="row">
 
     <! -- BLOG POSTS LIST -->
-    <div class="col-lg-9">
+      <div class="col-lg-9">
+        {% for post in site.categories['blog'] %}
+        <div class="blog-list-container" id="allArticles">
+          <! -- Blog Post -->
+            <div class="row">
+              <div class="col-lg-12">
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                  <h3 class="ctitle">{{ post.title }}</h3>
+                </a>
+                <div class="post-meta"> {{post.author}}, {{ post.date | date: "%Y-%-m-%-d" }} </div>
+              </div>
 
-      {% for post in site.categories['blog'] %}
-      <! -- Blog Post -->
-      <div class="row">
-        <div class="col-lg-12">
-          <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
-          <div class="post-meta"> {{post.author}}, {{ post.date | date: "%Y-%-m-%-d" }} </div>
+              <div class="{%if post.thumb%}col-lg-9{%else%}col-log-12{%endif%}">
+                {{ post.excerpt }}
+                <p><a href="{{ post.url | prepend: site.baseurl }}">[详情]</a></p>
+              </div>
+              {% if post.thumb %}
+              <div class="col-lg-3">
+                <img class="img-responsive"
+                  src="{%if post.thumb contains 'http:' or post.thumb contains 'https:'%}{{post.thumb}}{%else%}{{"/public/assets/img/blog/"|prepend: site.url}}{{post.thumb}}{%endif%}" />
+              </div>
+              {% endif %}
+            </div>
+            <div class="hline"></div>
+
+            <div class="spacing"></div>
         </div>
-        
-        <div class="{%if post.thumb%}col-lg-9{%else%}col-log-12{%endif%}">
-          {{ post.excerpt }}
-          <p><a href="{{ post.url | prepend: site.baseurl }}">[详情]</a></p>
+        {% endfor %}
+
+        {% for tag in site.tags %}
+        {% assign t = tag | first %}
+        {% assign posts = tag | last %}
+        <div class="blog-list-container hidden" id="{{ t }}-container">
+          {% for post in posts %}
+          {% if post.tags contains t and post.categories contains 'blog' %}
+          <! -- Blog Post -->
+            <div class="row">
+              <div class="col-lg-12">
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                  <h3 class="ctitle">{{ post.title }}</h3>
+                </a>
+                <div class="post-meta"> {{post.author}}, {{ post.date | date: "%Y-%-m-%-d" }} </div>
+              </div>
+
+              <div class="{%if post.thumb%}col-lg-9{%else%}col-log-12{%endif%}">
+                {{ post.excerpt }}
+                <p><a href="{{ post.url | prepend: site.baseurl }}">[详情]</a></p>
+              </div>
+              {% if post.thumb %}
+              <div class="col-lg-3">
+                <img class="img-responsive"
+                  src="{%if post.thumb contains 'http:' or post.thumb contains 'https:'%}{{post.thumb}}{%else%}{{"/public/assets/img/blog/"|prepend: site.url}}{{post.thumb}}{%endif%}" />
+              </div>
+              {% endif %}
+            </div>
+            <div class="hline"></div>
+
+            <div class="spacing"></div>
+            {% endif %}
+            {% endfor %}
         </div>
-        {% if post.thumb %}
-          <div class="col-lg-3">
-             <img class="img-responsive" src="{%if post.thumb contains 'http:' or post.thumb contains 'https:'%}{{post.thumb}}{%else%}{{"/public/assets/img/blog/"|prepend: site.url}}{{post.thumb}}{%endif%}" />
-          </div>
-        {% endif %}
+        {% endfor %}
+
       </div>
-      <div class="hline"></div>
+      <! --/col-lg-9 -->
 
-      <div class="spacing"></div>
-      {% endfor %}
+        {% include sidebar.html %}
 
-    </div><! --/col-lg-8 -->
-
-    {% include sidebar.html %}
-
-  </div><! --/row -->
-</div><! --/container -->
+  </div>
+  <! --/row -->
+</div>
+<! --/container -->
