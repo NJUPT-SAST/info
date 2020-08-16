@@ -45,7 +45,7 @@ permalink: /events/
 
         <div class="col-lg-3">
           {% if event.poster %}
-          <img class="img-responsive event-poster" src="{%if event.poster contains 'http:' or event.poster contains 'https:'%}{{event.poster}}{%else%}{{"/public/assets/img/events/"|prepend: site.url}}{{event.poster}}{%endif%}" />
+          <img class="img-responsive event-poster" src="{%if event.poster contains 'http:' or event.poster contains 'https:'%}{{event.poster}}{%else%}{{"/info/assets/img/events/"|prepend: site.url}}{{event.poster}}{%endif%}" />
           {% endif %}
         </div>
 
