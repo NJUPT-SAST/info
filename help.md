@@ -84,7 +84,7 @@ git push --set-upstream <YOUR-GITHUB-USERNAME> <BRANCHNAME>
    ---
    ```
     其中 `layout`、 `author` 和 `permalink` 为必填项。如果您希望以您的文章开头作为摘要，请在合适的地方添加 `<!--more-->` 标签。
-3. 插入图片的格式为： `![DESCRIPTION](/public/assets/img/blog/<TITLE>/<FILE-NAME>.png)`，并将相应图片移至该目录下。
+3. 插入图片的格式为： `![DESCRIPTION](/info/assets/img/blog/<TITLE>/<FILE-NAME>.png)`，并将相应图片移至该目录下。
 
 其余与一般 Markdown 语法相同，本站支持插入行内和块级公式。
 
