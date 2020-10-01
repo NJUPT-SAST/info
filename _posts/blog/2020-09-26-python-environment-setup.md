@@ -28,7 +28,8 @@ permalink: /blog/2020/python-environment
      ![](/info/assets/img/blog/python-environment/python-3.png)
      
   4. 首先打开开始菜单Python文件夹下的 `Python 3.8(64-bit)`   
-     ![](/info/assets/img/blog/python-environment/python-4.png) 
+     ![](/info/assets/img/blog/python-environment/python-4.png)   
+     
      输入以下python脚本并回车：  
      
      ``` python
@@ -47,18 +48,18 @@ permalink: /blog/2020/python-environment
      ```
      保存后按 `F5` 或点击菜单栏 `Run->Run Module` 即可运行脚本。  
      ![](/info/assets/img/blog/python-environment/python-6.png)    
-     
+  
   6. Python的强大得益于第三方库的支持，下面介绍如何安装第三方库：  
      按下快捷键 `Win+R` 然后输入 `cmd` （或 `powershell` ）打开命令提示符，然后输入`pip install xxx` 即可安装名为 `xxx` 的第三方库。例如校科协爬虫公开课将会用到 `requests` 库，则输入：
-     
+  
      ``` bash
      pip install requests
      ```
-     
+  
      得到如下结果即为安装成功：  
-     
+  
      ![](/info/assets/img/blog/python-environment/python-7.png)
-  （可能有些库的安装需要以管理员身份运行命令行才能成功安装，方法为在左下角开始菜单键上右击选择 `Windows Powershell（管理员）` ）     
+     （可能有些库的安装需要以管理员身份运行命令行才能成功安装，方法为在左下角开始菜单键上右击选择 `Windows Powershell（管理员）` ）     
 - 常见问题Q&A
   
   1. 安装过程中提示没有文件夹读写权限?
