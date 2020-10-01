@@ -68,19 +68,19 @@ permalink: /blog/2020/cpp-environment
    同类优秀教程阅读：[Visual Studio Code 配置 C/C++ 环境 | 0xfaner's Blog](https://0xfaner.top/posts/vscode-config/#more)
   
   1. 下载 `VSCode` 安装包  `VSCodeSetup-x64-1.49.2.exe` ，可在校科协招新群文件内下载，也可去[官网下载](https://code.visualstudio.com/#alt-downloads)，请点击 `System Installer` 后的 `64 bit` （根据[系统位数]([如何查看Windows 系统位数-百度经验 (baidu.com)](https://jingyan.baidu.com/article/27fa73265ed13046f8271f19.html))选择）下载安装包 。  
-     ![附加任务](/info/assets/img/blog/c-environmentdownload.png)
+     ![附加任务](/info/assets/img/blog/c-environment/download.png)
      
   2. 以管理员身份运行安装包，选择安装位置时最好选择不含中文的路径，建议按照图片所示选择附加任务：  
-     ![附加任务](/info/assets/img/blog/c-environment附加任务.png)  
+     ![附加任务](/info/assets/img/blog/c-environment/附加任务.png)  
      
   3. 点击左侧 `Extensions` 按钮或使用快捷键 `Ctrl+Shift+X` 打开扩展商店。  
-     ![](/info/assets/img/blog/c-environment插件.png)
+     ![](/info/assets/img/blog/c-environment/插件.png)
      
   4. 搜索 `Chinese` 安装语言包 `Chinese (Simplified) Language Pack for Visual Studio Code` 以汉化 `VSCode` ；搜索 `C++` 安装插件 `C/C++` 和 `C/C++ Compile Run` ，以获得 `C/C++` 编辑器环境和按下 `F6` 快速运行体验。（安装完语言包后右下角可能会提示重启，点击重启即可）   
   
   5. 下载 `TDM-GCC` ，可在校科协招新群群文件内下载，也可去[官网下载](https://jmeubank.github.io/tdm-gcc/download/)，点击 `tdm64-gcc-9.2.0.exe` 下载。  
      
-     ![](/info/assets/img/blog/c-environmentmingw下载.png) 
+     ![](/info/assets/img/blog/c-environment/mingw下载.png) 
      
   6. 以管理员身份运行安装包，点击 `Create` 按钮进入安装，选择安装位置时安装路径**不能有英文**，其他请一路 `Next` 即可。  
   
@@ -96,7 +96,7 @@ permalink: /blog/2020/cpp-environment
      ```
    然后按下 `F6` 编译运行，如果能够得到下图结果，则表示环境配置成功！祝贺祝贺！(缩小窗口截图)  
   
-     ![](/info/assets/img/blog/c-environmenthello,sast.png)  
+     ![](/info/assets/img/blog/c-environment/hello,sast.png)  
      ``` c
       #include <stdio.h>
       int main()
@@ -108,13 +108,13 @@ permalink: /blog/2020/cpp-environment
       }
      ```
      然后按下 `F6` 编译运行，并输入 `1 2` ，如果能够得到下图结果，则表示环境配置成功！祝贺祝贺！  
-     ![](/info/assets/img/blog/c-environmenta+b.png)
+     ![](/info/assets/img/blog/c-environment/a+b.png)
      
   8. 进一步配置...
      感觉字体太小了?还没法用 `Ctrl+鼠标滚轮` 放大缩小?代码空格太多了不想输入?  进行进一步配置非常重要！点击左下角的设置图标，选择 `设置` 或使用快捷键 `Ctrl+,` 打开设置界面。（也可以按`Ctrl+Shift+P`，键入`Open Settings (JSON)`，选择 `首选项：打开设置(json)` ，直接打开 `settings.json`文件）
-     ![](/info/assets/img/blog/c-environmentopensetting.png)  
+     ![](/info/assets/img/blog/c-environment/opensetting.png)  
      然后点右上角第一个按钮打开 `settings.json` 配置文件。  
-     ![](/info/assets/img/blog/c-environmentsetting.png)
+     ![](/info/assets/img/blog/c-environment/setting.png)
   
   9. 如果想要使用鼠标滚轮缩放，在大括号内插入以下脚本：  
      ``` json
