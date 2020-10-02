@@ -82,9 +82,13 @@ permalink: /blog/2020/cpp-environment
      
      ![](/info/assets/img/blog/c-environment/mingw下载.png) 
      
-  6. 以管理员身份运行安装包，点击 `Create` 按钮进入安装，选择安装位置时安装路径**不能有英文**，其他请一路 `Next` 即可。  
+  6. 以管理员身份运行安装包，去掉 `Check for updated files on the TDM-GCC server` 前面的勾，点击 `Create` 按钮进入安装，选择安装位置时安装路径**不能有英文**，其他请一路 `Next` 即可。  
+     ![](/info/assets/img/blog/c-environment/TDM-GCC.png)
   
-  7. 切回 `VSCode` 新建一个后缀名为 `c` 的文件，如 `Paste.c`，并输入以下代码：  
+  7. 切回 `VSCode` 新建一个后缀名为 `c` 的文件，如 `Paste.c` 。（新建文件直接保存，文件类型**选择 `C` **）  
+     ![](/info/assets/img/blog/c-environment/newfile.png)  
+  
+  并输入以下代码：  
   
      ``` c
      #include <cstdio>
@@ -109,7 +113,7 @@ permalink: /blog/2020/cpp-environment
      ```
      然后按下 `F6` 编译运行，并输入 `1 2` ，如果能够得到下图结果，则表示环境配置成功！祝贺祝贺！  
      ![](/info/assets/img/blog/c-environment/a+b.png)
-     
+  
   8. 进一步配置...
      感觉字体太小了?还没法用 `Ctrl+鼠标滚轮` 放大缩小?代码空格太多了不想输入?  进行进一步配置非常重要！点击左下角的设置图标，选择 `设置` 或使用快捷键 `Ctrl+,` 打开设置界面。（也可以按`Ctrl+Shift+P`，键入`Open Settings (JSON)`，选择 `首选项：打开设置(json)` ，直接打开 `settings.json`文件）
      ![](/info/assets/img/blog/c-environment/opensetting.png)  
@@ -141,4 +145,5 @@ permalink: /blog/2020/cpp-environment
   1. 可以配置按 `F5` 调试运行?  
      这个可以参考柏老板的配置教程：[Visual Studio Code 配置 C/C++ 环境 | 0xfaner's Blog](https://0xfaner.top/posts/vscode-config/#more)
   2. 为什么我按下 `F6` 无法成功运行？  
-     请检查TDM安装位置是否含有中文，中文符号也不行！
+     请检查TDM安装位置是否含有中文，中文符号也不行！另外，如果是笔记本的话，看一下是否 `F6` 默认是功能键，尝试使用 `Fn+F6` ( 按住 `Fn` 键不放按 `F6` ) 编译运行。
+
