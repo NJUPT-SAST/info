@@ -82,7 +82,8 @@ permalink: /blog/2020/cpp-environment
      
      ![](/info/assets/img/blog/c-environment/mingw下载.png) 
      
-  6. 以管理员身份运行安装包，点击 `Create` 按钮进入安装，选择安装位置时安装路径**不能有英文**，其他请一路 `Next` 即可。  
+  6. 以管理员身份运行安装包，去掉 `Check for updated files on the TDM-GCC server` 前面的勾，点击 `Create` 按钮进入安装，选择安装位置时安装路径**不能有英文**，其他请一路 `Next` 即可。  
+     ![](/info/assets/img/blog/c-environment/TDM-GCC.png)
   
   7. 切回 `VSCode` 新建一个后缀名为 `c` 的文件，如 `Paste.c`，并输入以下代码：  
   
