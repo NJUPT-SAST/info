@@ -1,3 +1,14 @@
+---
+layout: post
+title: 招新试题资料
+date: 2020-10-10
+author: J.C
+categories:
+    - archive
+tags: 
+permalink: /archive/exam-photography-resource
+---
+
 # 图1
 
 ![图片1](https://img.matrix72.top/test1.jpg)
