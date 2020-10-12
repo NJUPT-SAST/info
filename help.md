@@ -7,10 +7,10 @@ permalink: /help/
 ## 这是什么？
 欢迎来到南京邮电大学大学生科学技术协会（以下简称 SAST）的信息公示站，在这里您可以寻找到：
 * 我们已经举办的、正在举办的和将要举办的活动
-* 科协成员和嘉宾撰写的技术博客，心得体会和其他文章
+* SAST 成员和嘉宾撰写的技术博客，心得体会和其他文章
 * 公开分享的讲义、资料和有价值的链接
 
-本站由科协技术中心共同维护，您也可以阅览本文档的[如何贡献](#如何贡献)一节来参与贡献。
+本站由 SAST 技术中心共同维护，您也可以阅览本文档的[如何贡献](#如何贡献)一节来参与贡献。
 
 本站的搭建离不开以下工具和开源项目的支持，在此一并鸣谢：
 * [清华大学 TUNA 协会网站](https://github.com/tuna/tuna.moe)
@@ -26,10 +26,11 @@ permalink: /help/
 ### 使用 Git
 您可以将您的文章以 Markdown 的格式提交到我们的 Git 仓库，遵循以下的步骤：
 
-打开我们的[仓库](https://github.com/NJUPT-SAST-Technology-Center/public.git)并 Fork 我们的项目到您的 Github 账号。
+打开我们的[仓库](https://github.com/NJUPT-SAST-Technology-Center/info.git)并 Fork 我们的项目到您的 Github 账号。
 
 ```bash
 git clone https://github.com/NJUPT-SAST-Technology-Center/public.git
+cd ./info
 git remote add <YOUR-GITHUB-USERNAME> <YOUR FORKED URL>
 git checkout -b <BRANCH-NAME>
 ```
@@ -70,7 +71,7 @@ git push --set-upstream <YOUR-GITHUB-USERNAME> <BRANCHNAME>
     title: <YOUR-TITLE>
     date: <YYYY-MM-DD>
     author: <YOUR-NAME>
-    permalink: /blog/2020/<LINK-NAME>
+    permalink: /blog/<YEAR>/<LINK-NAME>
     categories:
         - blog (or event)
     tags: <TAG1>, <TAG2>, ...
