@@ -29,7 +29,7 @@ permalink: /help/
 打开我们的[仓库](https://github.com/NJUPT-SAST-Technology-Center/info.git)并 Fork 我们的项目到您的 Github 账号。
 
 ```bash
-git clone https://github.com/NJUPT-SAST-Technology-Center/public.git
+git clone https://github.com/NJUPT-SAST-Technology-Center/info.git
 cd ./info
 git remote add <YOUR-GITHUB-USERNAME> <YOUR FORKED URL>
 git checkout -b <BRANCH-NAME>
