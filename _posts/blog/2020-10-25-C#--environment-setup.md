@@ -1,14 +1,15 @@
 ---
- layout: post
- title: C#环境配置
- date: 2020-10-25
- author: Ender Horror
- permalink: /blog/2020/C#--environment-setup
- categories:
-     - blog
- tags: C#
- excerpt: C#的开发环境配置已经学习资料
+layout: post
+title: C#环境配置
+date: 2020-10-25
+author: Ender Horror
+categories:
+    - blog
+tags: C#
+ permalink: /blog/2020/C#--environment
 ---
+
+
 ## 1.下载Visual Studio
 https://visualstudio.microsoft.com/zh-hans/vs/
 版本选择(Community)社区版
