@@ -6,7 +6,7 @@ author: EnderHorror
 categories:
     - blog
 tags: C# 
-permalink: /blog/2020/C#-environment-setup
+permalink: /blog/2020/C#-environment
 ---
 
 本文将介绍常见的`C#`环境配置方法。  
