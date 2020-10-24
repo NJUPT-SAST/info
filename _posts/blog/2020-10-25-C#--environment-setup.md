@@ -8,20 +8,22 @@ categories:
 tags: C#
  permalink: /blog/2020/C#--environment
 ---
+本文将介绍常见的`C#`环境配置方法。  
 
+<!--more-->
 
 ## 1.下载Visual Studio
 https://visualstudio.microsoft.com/zh-hans/vs/
-版本选择(Community)社区版
+版本选择`Community`社区版
 
 ## 2. 安装Visual Studio
-开发环境选择.Net开发
+开发环境选择`.Net开发`
 
 ## 3.注册微软账号
 在微软官网注册,如果有的话直接登录
 
 ## 4.登录并且启动Visual Studio
-创建一个控制台应用程序项目
+创建一个`控制台应用程序`项目
 
 ## 5.测试
 输入下列代码运行
