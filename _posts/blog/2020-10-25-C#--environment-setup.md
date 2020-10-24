@@ -2,12 +2,13 @@
 layout: post
 title: C#环境配置
 date: 2020-10-25
-author: Ender Horror
+author: EnderHorror
 categories:
     - blog
-tags: C#
- permalink: /blog/2020/C#--environment
+tags: C# 
+permalink: /blog/2020/C#--environment
 ---
+
 本文将介绍常见的`C#`环境配置方法。  
 
 <!--more-->
