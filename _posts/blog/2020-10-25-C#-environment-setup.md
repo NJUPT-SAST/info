@@ -1,33 +1,33 @@
 ---
 layout: post
-title: C#»·¾³ÅäÖÃ
+title: C#ç¯å¢ƒé…ç½®
 date: 2020-10-25
 author: EnderHorror
 categories:
     - blog
 tags: C# 
-permalink: /blog/2020/C#--environment-setup
+permalink: /blog/2020/C#-environment-setup
 ---
 
-±¾ÎÄ½«½éÉÜ³£¼ûµÄ`C#`»·¾³ÅäÖÃ·½·¨¡£  
+æœ¬æ–‡å°†ä»‹ç»å¸¸è§çš„`C#`ç¯å¢ƒé…ç½®æ–¹æ³•ã€‚  
 
 <!--more-->
 
-## 1.ÏÂÔØVisual Studio
+## 1.ä¸‹è½½Visual Studio
 https://visualstudio.microsoft.com/zh-hans/vs/
-°æ±¾Ñ¡Ôñ`Community`ÉçÇø°æ
+ç‰ˆæœ¬é€‰æ‹©`Community`ç¤¾åŒºç‰ˆ
 
-## 2. °²×°Visual Studio
-¿ª·¢»·¾³Ñ¡Ôñ`.Net¿ª·¢`
+## 2. å®‰è£…Visual Studio
+å¼€å‘ç¯å¢ƒé€‰æ‹©`.Netå¼€å‘`
 
-## 3.×¢²áÎ¢ÈíÕËºÅ
-ÔÚÎ¢Èí¹ÙÍø×¢²á,Èç¹ûÓĞµÄ»°Ö±½ÓµÇÂ¼
+## 3.æ³¨å†Œå¾®è½¯è´¦å·
+åœ¨å¾®è½¯å®˜ç½‘æ³¨å†Œ,å¦‚æœæœ‰çš„è¯ç›´æ¥ç™»å½•
 
-## 4.µÇÂ¼²¢ÇÒÆô¶¯Visual Studio
-´´½¨Ò»¸ö`¿ØÖÆÌ¨Ó¦ÓÃ³ÌĞò`ÏîÄ¿
+## 4.ç™»å½•å¹¶ä¸”å¯åŠ¨Visual Studio
+åˆ›å»ºä¸€ä¸ª`æ§åˆ¶å°åº”ç”¨ç¨‹åº`é¡¹ç›®
 
-## 5.²âÊÔ
-ÊäÈëÏÂÁĞ´úÂëÔËĞĞ
+## 5.æµ‹è¯•
+è¾“å…¥ä¸‹åˆ—ä»£ç è¿è¡Œ
 ```
 using System;
 
@@ -44,12 +44,12 @@ namespace HelloWorldApplication
     }
 }
 ```
-Èç¹ûÊä³öÁËHello WorldÔò³É¹¦ÅäÖÃ»·¾³
+å¦‚æœè¾“å‡ºäº†Hello Worldåˆ™æˆåŠŸé…ç½®ç¯å¢ƒ
 
 ----
-## Ñ§Ï°×ÊÁÏÍÆ¼ö
-1. Êé¼®ÍÆ¼ö Visual C# ´ÓÈëÃÅµ½¾«Í¨
-2. ÍøÕ¾ÍÆ¼ö²ËÄñ½Ì³Ì
+## å­¦ä¹ èµ„æ–™æ¨è
+1. ä¹¦ç±æ¨è Visual C# ä»å…¥é—¨åˆ°ç²¾é€š
+2. ç½‘ç«™æ¨èèœé¸Ÿæ•™ç¨‹
 https://www.runoob.com/csharp/csharp-tutorial.html
 
-### »ù´¡²¿·ÖÍÆ¼ö×ÔÑ§
+### åŸºç¡€éƒ¨åˆ†æ¨èè‡ªå­¦
