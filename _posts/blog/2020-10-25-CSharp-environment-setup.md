@@ -5,7 +5,7 @@ date: 2020-10-25
 author: EnderHorror, Jisu-Woniu
 categories:
     - blog
-tags: C#, .NET, Tutorial
+tags: C# .NET Tutorial
 permalink: /blog/2020/CS-environment-setup
 ---
 

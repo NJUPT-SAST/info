@@ -5,7 +5,7 @@
  author: linyuqi9, Jisu-Woniu
  categories:
      - blog
- tags: Java
+ tags: Java Tutorial
  permalink: /blog/2021/java-environment
 ---
 
