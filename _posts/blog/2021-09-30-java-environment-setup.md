@@ -22,4 +22,4 @@
   2. 右键以管理员身份运行安装包，在安装向导界面中点击“安装”并等待程序自动安装。
   3. 安装完成。如图所示。
 
-![](C:\Users\17816\info\assets\img\blog\java-environment\java-1.png)
+![](/info/assets/img/blog/java-environment/java-1.png)
