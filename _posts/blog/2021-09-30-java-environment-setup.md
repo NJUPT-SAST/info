@@ -16,6 +16,7 @@
 ## Java 下载安装
 
 目前主流的 Java 版本分为 4 种，如下表所示：
+
 | 版本 | Oracle Java | OpenJDK/OpenJRE | 区别 |
 |:--:|:--:|:--:|:--:|
 | 开发环境 | Oracle JDK | OpenJDK | 带有编译器 |
