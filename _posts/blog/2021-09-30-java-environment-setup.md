@@ -32,7 +32,7 @@
     如果需要配置 Oracle Java 开发环境（Oracle JDK），请参考：<https://www.oracle.com/java/technologies/downloads/>
 
 - 配置步骤：
-  1. 进入 Oracle Java 下载页面 <https://www.java.com/zh-CN/> 点击“免费 Java 下载”，再点击跳转后页面的“同意并开始免费下载”按钮，等待安装包下载完成。
+  1. 请务必使用 `chrome浏览器` 进入 Oracle Java 下载页面 <https://www.java.com/zh-CN/> 点击“免费 Java 下载”，再点击跳转后页面的“同意并开始免费下载”按钮，等待安装包下载完成。
   2. 右键以管理员身份运行安装包，在安装向导界面中点击“安装”并等待程序自动安装。
   3. 安装完成，如图所示。
 
