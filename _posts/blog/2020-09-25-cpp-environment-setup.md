@@ -91,14 +91,14 @@ permalink: /blog/2020/cpp-environment
   并输入以下代码：  
   
      ``` c
-     #include <cstdio>
+     #include <stdio.h>
      int main()
      {
          printf("Hello,SAST!");
          return 0;
      }
      ```
-   然后按下 `F6` 编译运行，如果能够得到下图结果，则表示环境配置成功！祝贺祝贺！(缩小窗口截图)  
+   然后按下 `F6` 或 `Ctrl+6` 编译运行，如果能够得到下图结果，则表示环境配置成功！祝贺祝贺！(缩小窗口截图)  
   
      ![](/info/assets/img/blog/c-environment/hello,sast.png)  
      ``` c
@@ -111,7 +111,7 @@ permalink: /blog/2020/cpp-environment
           return 0;
       }
      ```
-     然后按下 `F6` 编译运行，并输入 `1 2` ，如果能够得到下图结果，则表示环境配置成功！祝贺祝贺！  
+     然后按下 `F6` 或 `Ctrl+6` 编译运行，并输入 `1 2` ，如果能够得到下图结果，则表示环境配置成功！祝贺祝贺！  
      ![](/info/assets/img/blog/c-environment/a+b.png)
   
   8. 进一步配置...
@@ -145,5 +145,5 @@ permalink: /blog/2020/cpp-environment
   1. 可以配置按 `F5` 调试运行?  
      这个可以参考柏老板的配置教程：[Visual Studio Code 配置 C/C++ 环境 | 0xfaner's Blog](https://0xfaner.top/posts/vscode-config/#more)
   2. 为什么我按下 `F6` 无法成功运行？  
-     请检查TDM安装位置是否含有中文，中文符号也不行！另外，如果是笔记本的话，看一下是否 `F6` 默认是功能键，尝试使用 `Fn+F6` ( 按住 `Fn` 键不放按 `F6` ) 编译运行。
+     请检查TDM安装位置是否含有中文，中文符号也不行！另外，如果是笔记本的话，看一下是否 `F6` 默认是功能键，尝试使用 `Fn+F6` ( 按住 `Fn` 键不放按 `F6` ) 编译运行。另外也可以尝试使用 `Ctrl+6` 组合键来编译运行。  
 
