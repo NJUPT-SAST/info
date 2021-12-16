@@ -1,11 +1,11 @@
 ---
  layout: post
- title: 
- date: <2020-9-10>
- author: <multicoloredstone>
- permalink: /blog/<2020>/<Simple-Guide-Markdown>
+ title: Simple-Guide-Markdown
+ date: 2020-9-10
+ author: multicoloredstone
+ permalink: /blog/2020/Simple-Guide-Markdown
  categories:
-     - blog (or event)
+     - blog
  tags: <TAG1> <TAG2> ...
  thumb: <LINK-TO-THUMB>
 
