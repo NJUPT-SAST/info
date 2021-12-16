@@ -122,5 +122,3 @@ $$
 
 <p align="right">by multicoloredstone</p>
 
-
-
