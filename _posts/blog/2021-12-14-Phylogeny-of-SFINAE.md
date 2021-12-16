@@ -2,23 +2,19 @@
 layout: post
 title: SFINAE 的发展史
 date: 2021-12-14
-author: 巢腾
+author: Offensive77
 categories:
     - blog
 tags: SFINAE
 permalink: /blog/2021/Phylogeny-of-SFINAE
 ---
-# SFINAE 的发展史
-
-​																											                                             作者: Offensive77
-
-## 前言
 
 说到 C++ 的模板技术，有一个术语不得不提：**SFINAE** (读作 Sfee-nay，**S**ubstitution **F**ailure is **N**ot **A**n **E**rror )。这个技术使得 C++ 这样的静态语言在一定程度上可以实现类似反射的功能 (可以根据类型的特征，表现出不同的行为)。在 C++20 标准概念库发布之后，许多运用到 **SFINAE** 技术的场景都可以被概念取代，这一古老的技术也许也将退出历史舞台。
 
 当然，这不是一件值得悲伤的事情，这说明标准委员会在积极地寻求摆脱历史的包袱的途径。
 
 这篇文章旨在向想要了解 **SFINAE** 的读者介绍这一技术的发展历史。
+<!--more-->
 
 ## 什么是 **SFINAE**?
 
