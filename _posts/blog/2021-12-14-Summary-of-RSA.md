@@ -55,7 +55,7 @@ $$
 
 - 证明：我们有等式$$ed-k\phi(n)=1$$，于是
   $$
-  |\frac{e}{\phi(n)}-\frac{k}{d}|=\frac{1}{d\phi(n)}
+  \lvert \frac{e}{\phi(n)}-\frac{k}{d} \rvert=\frac{1}{d\phi(n)}
   $$
   此时，$$\frac{k}{d}$$是$$\frac{e}{\phi(n)}$$的近似值。尽管我们不知道$$\phi(n)$$，但是我们可以用n近似它。
   $$
@@ -63,17 +63,17 @@ $$
   $$
   同时，由p、q的不等关系容易得到$$p+q-1<3\sqrt n$$，于是
   $$
-  |n-\phi(n)|<3\sqrt n
+  \lvert n-\phi(n) \rvert<3\sqrt n
   $$
   我们用上面的不等式代换原有的等式
   $$
-  |\frac{e}{n}-\frac{k}{d}|=|\frac{ed-k\phi(n)-kn+k\phi(n)}{nd}|\\=|\frac{1-k(n-\phi(n))}{nd}|\\\leq|\frac{3k\sqrt{n}}{nd}|\\ 
+  \lvert \frac{e}{n}-\frac{k}{d} \rvert=\lvert \frac{ed-k\phi(n)-kn+k\phi(n)}{nd} \rvert\\=\lvert \frac{1-k(n-\phi(n))}{nd} \rvert\\\leq\lvert \frac{3k\sqrt{n}}{nd} \rvert\\ 
   =\frac{3k}{d\sqrt n}
   $$
   
   由于等式$$k\phi(n)=ed-1<ed$$，因为$$e<\phi(n)$$，根据不等式原则可以知道$$k<d<\frac{1}{3}n^{\frac{1}{4}}$$。于是，上面的不等式可以进一步得到
   $$
-  |\frac{e}{n}-\frac{k}{d}|\leq\frac{3k}{d\sqrt n}<\frac{1}{d\sqrt[4]n}<\frac{1}{2d^2}
+  \lvert \frac{e}{n}-\frac{k}{d} \rvert\leq\frac{3k}{d\sqrt n}<\frac{1}{d\sqrt[4]n}<\frac{1}{2d^2}
   $$
   这是一个经典的逼近关系，分数 $$\frac{k}{d}$$ 且 $$k<n$$ 在约束$$\log_2n$$内非常逼近 $$\frac{e}{n}$$ 。实际上，所有类似这样的分数都是的连分数展开的收敛。因此我们首要做的便是计算的连分数 $$\frac{e}{n}$$ 的收敛，其中一个连分数就等于 $$\frac{k}{d}$$ 。由于$$ ed − kϕ(N)=1$$，所以$$gcd(k,d)=1$$，因此$$\frac{k}{d}$$是一个最简分数。这就是一个可以算出密钥d的线性时间算法。
 
@@ -89,21 +89,21 @@ Wiener attack后来被 Boneh and Durfee两人改进，把d的界扩大到了$$d<
 
 针对RSA低公钥指数最有力的攻击是基于Copper-smith的一个定理，Coppersmith定理有很多应用，这里我们只讨论其中的一些应用，具体如下。
 
-- 定理(Coppersmith)：令n为一个整数，$$f\in Z[x]$$是d次的一元多项式，设$$X=N^{\frac{1}{d}-\epsilon}$$其中$$\epsilon\geq0$$，在给定$$<n,f>$$之后Marvin能够有效找到所有满足$$|x_0|<X$$的整数，运行时间由在维数为$$O(w)$$且$$w=min(1/\epsilon,\log_2N)$$的格上运行的LLL算法所需时间决定。
+- 定理(Coppersmith)：令n为一个整数，$$f\in Z[x]$$是d次的一元多项式，设$$X=N^{\frac{1}{d}-\epsilon}$$其中$$\epsilon\geq0$$，在给定$$<n,f>$$之后Marvin能够有效找到所有满足$$\lvert x_0 \rvert<X$$的整数，运行时间由在维数为$$O(w)$$且$$w=min(1/\epsilon,\log_2N)$$的格上运行的LLL算法所需时间决定。
 
   该定理为有效地求模$$N$$的所有小于$$X=N^{1/d}$$的根提供了一种算法，当X越小，算法的运行时间越短。这个定理的强大之处在于它能够找到多项式的小根。当模数为素数时，就目前而言，找不到比使用Coppersmith定理更好的求根算法。
 
-我们概述了Coppersmith定理证明背后的主要思想，我们采用由Howgrave-Graham提出的简化方法。给定多项式$$h(x)=\Sigma a_ix^i\in Z[x]$$，并定义$$||h||^2=\Sigma|a_i|^2$$。证明需要下面的引理。
+我们概述了Coppersmith定理证明背后的主要思想，我们采用由Howgrave-Graham提出的简化方法。给定多项式$$h(x)=\Sigma a_ix^i\in Z[x]$$​，并定义$$\lVert h \rVert^2=\Sigma\lvert a_i \rvert^2$$​。证明需要下面的引理。
 
-- 引理：令$$h(x)\in Z[x]$$是d次多项式，同时令X为正整数。假设$$||h(xX)||<N/\sqrt d$$，如果存在$$|x_0|<X$$满足$$h(x_0)=0\pmod N$$，那么$$h(x_0)=0$$对整数成立。
+- 引理：令$$h(x)\in Z[x]$$是d次多项式，同时令X为正整数。假设$$\lVert h(xX) \rVert<N/\sqrt d$$，如果存在$$\lvert x_0 \rvert<X$$满足$$h(x_0)=0\pmod N$$，那么$$h(x_0)=0$$对整数成立。
 
 - 证明：从Schwarz不等式观察到：
   $$
-  |h(x_0)|=|\Sigma a_ix_0^i|\\
-  =|\Sigma a_iX^i(\frac{x_0}{X})^i|\\
-  \leq\Sigma| a_iX^i(\frac{x_0}{X})^i|\\
-  \leq\Sigma|a_iX^i|\\
-  \leq\sqrt d||h(xX)||<N
+  \lvert h(x_0) \rvert=\lvert \Sigma a_ix_0^i \rvert\\
+  =\lvert \Sigma a_iX^i(\frac{x_0}{X})^i \rvert\\
+  \leq\Sigma\lvert  a_iX^i(\frac{x_0}{X})^i \rvert\\
+  \leq\Sigma\lvert a_iX^i \rvert\\
+  \leq\sqrt d\lVert h(xX) \rVert<N
   $$
   因为$$h(x_0)=0\pmod N$$，所以我们可以得到结论。
 
@@ -127,11 +127,11 @@ Coppersmith找到了解决这个问题的方法：如果$$f(x_0)\equiv 0\pmod N$
 
 $$*$$元素对应我们忽略的其值的多项式的系数，所有空元素为零。由于矩阵是三角阵，其行列式就是对角线元素乘积。我们需要在这个格中找到短向量。
 
-Hermite的一个经典结论表明：任意维数为$$w$$的格$$L$$包含一个非零向量$$v\in L$$，它的范数满足$$||v||\leq \gamma_w\det(L)^{1/w}$$，其中$$\gamma_w$$是只依赖于$$w$$的常数。Hermite的界可以用来证明，对于足够大的$$m$$，我们的格包含小于的范数$$N^m$$向量。问题是我们能否有效地在中构造长度小于Hermite界的短向量，而LLL算法恰好是一种有效的算法。
+Hermite的一个经典结论表明：任意维数为$$w$$的格$$L$$包含一个非零向量$$v\in L$$，它的范数满足$$\lVert v \rVert\leq \gamma_w\det(L)^{1/w}$$，其中$$\gamma_w$$是只依赖于$$w$$的常数。Hermite的界可以用来证明，对于足够大的$$m$$，我们的格包含小于的范数$$N^m$$向量。问题是我们能否有效地在中构造长度小于Hermite界的短向量，而LLL算法恰好是一种有效的算法。
 
 - Fact（LLL）：若格$$L$$有一组基$$<u_1,\dots,u_w>$$，通过LLL算法，可以得到一个向量$$v\in L$$满足：
   $$
-  ||v||\leq2^{w/4}\det(L)^{1/w}
+  \lVert v \rVert\leq2^{w/4}\det(L)^{1/w}
   $$
   算法的运行时间是输入长度的四分之一
 
@@ -141,7 +141,7 @@ $$
 $$
 其中$$w=d(m+1)$$是$$L$$的维度。常规计算表明，对于足够大的$$m$$，也能满足约束条件。实际上，当时$$X=N^{\frac{1}{d}-\epsilon}$$，取$$m=O(k/d)$$和$$k=\min(\frac{1}{\epsilon},\log N)$$就足够了。因此，运行时间主要由在维数为$$O(k)$$的格上运行LLL算法所决定。
 
-一个自然而然的问题，Coppersmith定理能否应用于二元和多元多项式。如果$$f(x,y)\in Z_N[x,y]$$有根$$(x_0,y_0)$$且$$|x_0y_0|$$有适当的界，我们能有效地找到$$(x_0,y_0)$$吗？尽管相同的技术似乎仍然适用于某些二元多项式，但它目前还是一个有待证明的开放性问题。随着越来越多的结果依赖于Coppersmith定理的二元扩展，严密的算法将会非常有用。
+一个自然而然的问题，Coppersmith定理能否应用于二元和多元多项式。如果$$f(x,y)\in Z_N[x,y]$$有根$$(x_0,y_0)$$且$$\lvert x_0y_0 \rvert$$有适当的界，我们能有效地找到$$(x_0,y_0)$$吗？尽管相同的技术似乎仍然适用于某些二元多项式，但它目前还是一个有待证明的开放性问题。随着越来越多的结果依赖于Coppersmith定理的二元扩展，严密的算法将会非常有用。
 
 - 开放性问题3：找出可以将 Coppersmith 定理推广到二元多项式的一般条件。
 
@@ -184,7 +184,7 @@ Franklin-Reiter的攻击可能看起来有点人为。毕竟，为什么Bob要�
 一个简单的随机填充算法可能会通过将几个随机位附加到一个末端来填充一个明文 $$M$$，但是以下攻击指出了这种简单填充的危险。假设Bob向Alice发送了正确填充的加密$$M$$。攻击者Marvin拦截密文并阻止其到达目的地。Bob注意到Alice没有回复他的消息，并决定将重新发送给Alice。他随机填充并传输生成的密文$$M$$。Marvin现在有两个密文，对应于使用两种不同随机填充对同一消息的两次加密。以下定理表明，虽然他不知道使用的填充算法，但Marvin仍能够算出明文。
 
 - 定理8：令$$<N,e>$$是RSA的公钥，N长为$$n$$-bits。令$$m=[n/e^2]$$，设$$M\in Z_N^*$$是长最多为$$n-m$$-bits的消息。定义$$M_1=2^mM+r_1,M_2=2^mM+r_2$$，其中$$r_1,r_2$$是不同的整数，且$$0\leq r_1,r_2\leq 2^m$$。如果给定$$<N,e>$$和密文$$C_1,C_2$$，那么就可以有效恢复$$M$$。
-- 证明：定义$$g_1(x,y)=x^e-C_1,g_2(x,y)=(x+y)^e-C_2$$。我们知道，当$$y=r_2-r_1$$时，两个多项式有共同的根$$M_1$$。也就是说，$$\Delta=r_2-r_1$$是结果$$h(y)=res_x(g_1,g_2)\in Z_N[y]$$的根。$$h$$的次数最多为$$e^2$$。此外，有$$|\Delta|<2^m<N^{1/e^2}$$，因此$$\Delta$$是$$h\pmod N$$的一个小根，所以我们就可以通过Coppersmith定理计算它。一旦$$\Delta$$求出来，Franklin-Reiter攻击就可以用来计算$$M_2$$，最终算出$$M$$。
+- 证明：定义$$g_1(x,y)=x^e-C_1,g_2(x,y)=(x+y)^e-C_2$$。我们知道，当$$y=r_2-r_1$$时，两个多项式有共同的根$$M_1$$。也就是说，$$\Delta=r_2-r_1$$是结果$$h(y)=res_x(g_1,g_2)\in Z_N[y]$$的根。$$h$$的次数最多为$$e^2$$。此外，有$$\lvert \Delta \rvert<2^m<N^{1/e^2}$$，因此$$\Delta$$是$$h\pmod N$$的一个小根，所以我们就可以通过Coppersmith定理计算它。一旦$$\Delta$$求出来，Franklin-Reiter攻击就可以用来计算$$M_2$$，最终算出$$M$$。
 
 当 e = 3 时，只要填充长度小于消息长度的 1/9，就可以发起攻击。 这是一个重要的结论。 但是需要注意，对于 e = 65537 这一推荐值，对于标准的模数大小来说，这种攻击就无效了。
 
@@ -213,7 +213,7 @@ $$
 $$
 然后
 $$
-|\hat{d}-d|\leq k(p+q)/e\leq3k\sqrt N/e<3\sqrt N
+\lvert \hat{d}-d \rvert\leq k(p+q)/e\leq3k\sqrt N/e<3\sqrt N
 $$
 因此$$\hat{d}$$是$$d$$的很好的近似值。上面的界表明，对于大多数$$d$$，$$\hat{d}$$的一半高位和d中的相同。由于只有$$e$$个可能的$$k$$，因此Marvin可以构造一个大小为$$e$$的集合，使得该集合中的一个元素等于 d 的最高有效位的一半。$$e=3$$的情况特别有趣，在这种情况下，可以证明总是 k = 2，因此系统完全泄漏了 d 的一半最高有效位。 
 
