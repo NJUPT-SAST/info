@@ -2,16 +2,16 @@
  layout: post
  title: C语言急救车
  date: 2020-12-26
- author: matrix72
+ author: xjzsq, matrix72
  permalink: /blog/2020/c-final-exam
  categories:
      - event
- tags: C, Final exam
- slides: https://wwe.lanzous.com/idSSqjq8huf
+ tags: C Final exam
+ slides: https://wwr.lanzoui.com//idSSqjq8huf
  place: 大活三楼团校教室
 ---
 
-PPT下载地址：https://wwe.lanzous.com/idSSqjq8huf
+PPT下载地址：https://wwr.lanzoui.com//idSSqjq8huf
 
 用一节公开课的时间带领大家将考试的常见知识点和考察方式复习一遍，做到听进一道题就能多得一分，快速高效复习。
 
