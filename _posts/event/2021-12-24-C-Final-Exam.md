@@ -23,4 +23,4 @@ PPT下载：https://www.aliyundrive.com/s/AvVpC1tMbgW
 + 主讲人： 黄霄
 + 时间： 2021/12/24 18:30 UTC +08:00
 + 活动形式：教四-202 线下授课
-
++ 同步直播地址：http://live.bilibili.com/14980641
