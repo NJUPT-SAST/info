@@ -3,7 +3,7 @@
  title: C语言急救车
  date: 2020-12-26
  author: xjzsq, matrix72
- permalink: /blog/2020/c-final-exam
+ permalink: /event/2020/c-final-exam
  categories:
      - event
  tags: C Final exam
