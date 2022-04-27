@@ -76,8 +76,8 @@ git push --set-upstream <YOUR-GITHUB-USERNAME> <BRANCHNAME>
 1. 将您的文章文件名改为 `YYYY-MM-DD-TITLE` 的格式
 2. 在您的文档开头添加元信息，具体格式为
 
-   ```
-   ---
+    ```
+    ---
     layout: post
     title: <YOUR-TITLE>
     date: <YYYY-MM-DD>
@@ -93,8 +93,8 @@ git push --set-upstream <YOUR-GITHUB-USERNAME> <BRANCHNAME>
     podcast: <LINK-TO-PODCAST> (only active when this is a event)
     poster: <LINK-TO-POSTER> (only active when this is a event)
     place: <EVENT-PLACE> (only active when this is a event)
-   ---
-   ```
+    ---
+    ```
 
     其中 `layout`、 `author` 和 `permalink` 为必填项。如果您希望以您的文章开头作为摘要，请在合适的地方添加 `<!--more-->` 标签。
 3. 插入图片的格式为： `![DESCRIPTION](/info/assets/img/blog/<TITLE>/<FILE-NAME>.png)`，并将相应图片移至该目录下。

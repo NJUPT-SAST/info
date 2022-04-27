@@ -1,13 +1,12 @@
 ---
- layout: post
- title: STM32调库侠简明指南——GPIO篇
- date: 2020-7-3
- author: NONE
- permalink: /blog/2020/STM32-Readd-Lib
- categories:
-     - blog
- tags: STM32
-
+layout: post
+title: STM32调库侠简明指南——GPIO篇
+date: 2020-7-3
+author: NONE
+permalink: /blog/2020/STM32-Readd-Lib
+categories:
+    - blog
+tags: STM32
 ---
 
 <!--more-->

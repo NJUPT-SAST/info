@@ -1,14 +1,14 @@
 ---
- layout: post
- title: C语言急救车
- date: 2020-12-26
- author: xjzsq, matrix72
- permalink: /event/2020/c-final-exam
- categories:
-     - event
- tags: C Final exam
- slides: https://wwr.lanzoui.com//idSSqjq8huf
- place: 大活三楼团校教室
+layout: post
+title: C语言急救车
+date: 2020-12-26
+author: xjzsq, matrix72
+permalink: /event/2020/c-final-exam
+categories:
+    - event
+tags: C Final exam
+slides: https://wwr.lanzoui.com//idSSqjq8huf
+place: 大活三楼团校教室
 ---
 
 PPT下载地址：https://wwr.lanzoui.com//idSSqjq8huf

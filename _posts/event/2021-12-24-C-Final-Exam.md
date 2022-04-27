@@ -1,13 +1,13 @@
 ---
- layout: post
- title: C语言急救车
- date: 2021-12-24
- author: matrix72
- permalink: /event/2021/c-final-exam
- categories:
-     - event
- slides: https://www.aliyundrive.com/s/AvVpC1tMbgW
- place: 教四-202
+layout: post
+title: C语言急救车
+date: 2021-12-24
+author: matrix72
+permalink: /event/2021/c-final-exam
+categories:
+    - event
+slides: https://www.aliyundrive.com/s/AvVpC1tMbgW
+place: 教四-202
 ---
 
 PPT下载：https://www.aliyundrive.com/s/AvVpC1tMbgW
