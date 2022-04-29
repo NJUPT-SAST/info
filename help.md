@@ -31,10 +31,10 @@ permalink: /help/
 
 您可以将您的文章以 Markdown 的格式提交到我们的 Git 仓库，遵循以下的步骤：
 
-打开我们的[仓库](https://github.com/NJUPT-SAST-Technology-Center/info.git)并 Fork 我们的项目到您的 Github 账号。
+打开我们的[仓库](https://github.com/njupt-sast/info.git)并 Fork 我们的项目到您的 Github 账号。
 
 ```bash
-git clone https://github.com/NJUPT-SAST-Technology-Center/info.git
+git clone https://github.com/njupt-sast/info.git
 cd ./info
 git remote add <YOUR-GITHUB-USERNAME> <YOUR FORKED URL>
 git checkout -b <BRANCH-NAME>
@@ -105,6 +105,6 @@ git push --set-upstream <YOUR-GITHUB-USERNAME> <BRANCHNAME>
 
 搭建 Jekyll 环境，请参照官网的文档：<https://jekyllrb.com/docs/installation/>
 
-欢迎访问 SAST 的官方 Github： <https://github.com/NJUPT-SAST-Technology-Center>
+欢迎访问 SAST 的官方 Github： <https://github.com/njupt-sast>
 
-我们整理了科协人的个人博客，目录在：<https://github.com/NJUPT-SAST-Technology-Center/links>
+我们整理了科协人的个人博客，目录在：<https://github.com/njupt-sast/links>

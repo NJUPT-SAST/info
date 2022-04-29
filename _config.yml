@@ -2,7 +2,7 @@ title: NJUPT SAST
 brand: NJUPT SAST
 description: 南京邮电大学大学生科学技术协会官方网站
 baseurl: "/info"
-url: "https://njupt-sast-technology-center.github.io"
+url: "https://njupt-sast.github.io"
 
 # Build settings
 plugins:
