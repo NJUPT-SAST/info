@@ -6,17 +6,17 @@ permalink: /
 <div class="container">
   <div class="col-lg-12 text-center" style="margin-top: 7rem;margin-bottom: 7rem;">
     <picture>
-      <img src="{{site.url}}/info/assets/img/banner.png" srcset="{{srcset}}" />
+      <img src="{{site.url}}/assets/img/banner.png" srcset="{{srcset}}" />
     </picture>
   </div>
   <div class="row">
     <div id="recent-events" class="col-md-6 col-md-push-6">
-      <h2> 活动与授课 </h2> 
-      {% for event in site.categories['event'] limit:6 %} 
-      <div class="event" data-event-date="{{event.date | date: "%F"}}">
+      <h2> 活动与授课 </h2>
+      {% for event in site.categories['event'] limit:6 %}
+      <div class="event" data-event-date="{{event.date | date: " %F"}}">
         <div class="event-title">
           <a href="{{ event.url | prepend: site.baseurl }}">
-             <h4>{{ event.title }}</h4>
+            <h4>{{ event.title }}</h4>
           </a>
         </div>
         <div class="event-meta">
@@ -24,46 +24,49 @@ permalink: /
           <span><strong>地点:</strong> {{event.place}}</span>
           <span class="event-status">
           </span>
-        {% if event.podcast or event.bilibili or event.slides %}
-        <br>
-        <span><strong>资源: </strong></span>
-        {% if event.audio %}
-        <a data-toggle="tooltip" title="播客" class="label label-info" href="{{event.podcast}}" target="_blank"><i class="fa fa-podcast fa-fw"></i></a>
-        {% endif %}
-        {% if event.bilibili %}
-        <a data-toggle="tooltip" title="Bilibili" class="label label-info" href="{{event.bilibili}}" target="_blank"><i class="fa fa-video-camera fa-fw"></i></a>
-        {% endif %}
-        {% if event.slides %}
-        <a data-toggle="tooltip" title="讲稿" class="label label-info" href="{{event.slides}}" target="_blank"><i class="fa fa-file-alt fa-fw"></i></a>
-        {% endif %}
-        {% endif %}
+          {% if event.podcast or event.bilibili or event.slides %}
+          <br>
+          <span><strong>资源: </strong></span>
+          {% if event.audio %}
+          <a data-toggle="tooltip" title="播客" class="label label-info" href="{{event.podcast}}" target="_blank"><i
+              class="fa fa-podcast fa-fw"></i></a>
+          {% endif %}
+          {% if event.bilibili %}
+          <a data-toggle="tooltip" title="Bilibili" class="label label-info" href="{{event.bilibili}}"
+            target="_blank"><i class="fa fa-video-camera fa-fw"></i></a>
+          {% endif %}
+          {% if event.slides %}
+          <a data-toggle="tooltip" title="讲稿" class="label label-info" href="{{event.slides}}" target="_blank"><i
+              class="fa fa-file-alt fa-fw"></i></a>
+          {% endif %}
+          {% endif %}
         </div>
         <div class="event-abstract">
-        {{ event.excerpt | strip_html | truncate: 240, '...'}}
+          {{ event.excerpt | strip_html | truncate: 240, '...'}}
         </div>
       </div>
-      {% endfor %} 
+      {% endfor %}
       <div>
         <a href={{"/events/"|prepend: site.baseurl}}>更多</a>
       </div>
     </div>
     <div id="recent-posts" class="col-md-6 col-md-pull-6">
-      <h2> 最新博客 </h2> 
-      {% for post in site.categories['blog'] limit:6 %} 
+      <h2> 最新博客 </h2>
+      {% for post in site.categories['blog'] limit:6 %}
       <div class="post">
         <div class="post-title">
           <a href="{{ post.url | prepend: site.baseurl }}">
-             <h4><i class="fa fa-file-text-o"></i> {{ post.title }}</h4>
+            <h4><i class="fa fa-file-text-o"></i> {{ post.title }}</h4>
           </a>
         </div>
         <div class="post-meta">
           {{post.author}}, {{post.date | date: "%Y-%-m-%-d"}}
         </div>
         <div class="post-abstract">
-        {{ post.excerpt | strip_html | truncate: 240, '...'}}
+          {{ post.excerpt | strip_html | truncate: 240, '...'}}
         </div>
       </div>
-      {% endfor %} 
+      {% endfor %}
       <div>
         <a href={{"/blog/"|prepend: site.baseurl}}>更多</a>
       </div>
@@ -73,37 +76,37 @@ permalink: /
 
 
 <script type="text/javascript">
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
 
-  var today = function() { 
-    var pad = function (number) {
-      var r = String(number);
-      if ( r.length === 1 ) {
-        r = '0' + r;
+    var today = function () {
+      var pad = function (number) {
+        var r = String(number);
+        if (r.length === 1) {
+          r = '0' + r;
+        }
+        return r;
       }
-      return r;
-    }
 
-    var _today = new Date();
-    return Date.parse(
-      _today.getFullYear().toString() + "-"
-      + pad(_today.getMonth()+1) + "-"
-      + pad(_today.getDate())
-    );
+      var _today = new Date();
+      return Date.parse(
+        _today.getFullYear().toString() + "-"
+        + pad(_today.getMonth() + 1) + "-"
+        + pad(_today.getDate())
+      );
 
-  }();
+    }();
 
-  $('#recent-events .event').each(function() {
-    // console.log($(this).attr("data-event-date"));
-    var event_date = Date.parse($(this).attr("data-event-date")),
+    $('#recent-events .event').each(function () {
+      // console.log($(this).attr("data-event-date"));
+      var event_date = Date.parse($(this).attr("data-event-date")),
         label = "";
-    if (today > event_date) {
-      label = "<span class='label label-info'>已结束</span>";
-    } else {
-      label = "<span class='label label-warning'>即将举办</span>";
-    }
-    $(this).find(".event-status").append(label);
+      if (today > event_date) {
+        label = "<span class='label label-info'>已结束</span>";
+      } else {
+        label = "<span class='label label-warning'>即将举办</span>";
+      }
+      $(this).find(".event-status").append(label);
+    });
   });
-});
 </script>

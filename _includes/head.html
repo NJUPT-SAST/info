@@ -4,11 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.about  }}">
     <!-- for share to twitter -->
-    <meta name="twitter:card" content="summary"></meta>
+    <meta name="twitter:card" content="summary">
+    </meta>
     <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
     <meta property="og:title" content="{{page.title}}" />
-    <link rel="shortcut icon" href="{{ "/info/assets/img/favicon.png" | prepend: site.url }}">
-    <link type="application/atom+xml" rel="alternate" href="{{ "/feed.xml" | prepend: site.url }}"
+    <link rel="shortcut icon" href="{{'/assets/img/favicon.png' | prepend: site.url }}">
+    <link type="application/atom+xml" rel="alternate" href="{{'/feed.xml' | prepend: site.url }}"
         title="{{ site.title }}" />
 
     {% capture page_title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
@@ -16,15 +17,16 @@
     <title>{{ page_title }}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ "/info/assets/css/bootstrap.css" | prepend: site.url }}" rel="stylesheet">
+    <link href="{{'/assets/css/bootstrap.css' | prepend: site.url }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{{ "/info/assets/css/style.css" | prepend: site.url }}" rel="stylesheet">
-    <link href="{{ "/info/assets/css/font-awesome.min.css" | prepend: site.url }}" rel="stylesheet">
-    <link href="{{ "/info/assets/css/font-awesome-v4-shims.min.css" | prepend: site.url }}" rel="stylesheet">
+    <link href="{{'/assets/css/style.css' | prepend: site.url }}" rel="stylesheet">
+    <link href="{{'/assets/css/font-awesome.min.css' | prepend: site.url }}" rel="stylesheet">
+    <link href="{{'/assets/css/font-awesome-v4-shims.min.css' | prepend: site.url }}" rel="stylesheet">
 
-    <script src="{{ "/info/assets/js/jquery.min.js" | prepend: site.url }}"></script>
-    <script src="{{ "/info/assets/js/bootstrap.min.js" | prepend: site.url }}"></script>
-    <script src="{{ "/info/assets/js/tag-filter.js" | prepend: site.url }}"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="{{'/assets/js/jquery.min.js' | prepend: site.url }}"></script>
+    <script src="{{'/assets/js/bootstrap.min.js' | prepend: site.url }}"></script>
+    <script src="{{'/assets/js/tag-filter.js' | prepend: site.url }}"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>

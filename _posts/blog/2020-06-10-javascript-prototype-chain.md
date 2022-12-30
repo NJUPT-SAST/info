@@ -19,11 +19,11 @@ JavaScript本身是没有类继承的，但是我们又可以使用ES6中的`cla
 
 在chrome的devtool中，我们打印一个引用类型的变量时可以看到这个变量一般会有个`__proto__`属性。这个对应的就是这个变量的原型。每个引用类型的变量都会有其对应的原型，然后其对应的原型又有其对应的原型 ~~套娃警告⚠️~~ ，这样的一条链被称为原型链，最终`__proto__`会指向null。
 
-![__proto__](/info/assets/img/blog/javascript-prototype-chain/1.png)
+![__proto__](/assets/img/blog/javascript-prototype-chain/1.png)
 
 就以上图为例子，我们需要先了解两个事实。首先js中的数组也是一个对象，第二 js的数组通过下表访问数组元素时，本质上是使用了方括号表示法的属性访问器来获取对象的属性。
 
-![__proto__](/info/assets/img/blog/javascript-prototype-chain/2.png)
+![__proto__](/assets/img/blog/javascript-prototype-chain/2.png)
 
 可能会疑惑我们常用的js的push方法，没有出现在这里。这其实是没有问题的，当我们调用`a.push()`的时候，首先会查看对象`a`上是否有`push`方法，没有则继续查看其`__proto__`上是否有`push`方法，以此类推，直到`__proto__`为null时，说明a上不存在`push`，因而报错，对于其他引用类型的变量也是同样的道理。我们使用构造函数new一个新的对象时，新对象的`__proto__` 指向的就是这个构造函数的`prototype`。这样，我们将一个构造函数的`prototype`的`__proto__`指向另一个构造函数的`prototype`，就可以用js的原型链实现类的继承。
 
